@@ -1,29 +1,160 @@
-body{
+body {
     color: #000;
+    background-color: #fff;
+    padding-top: 3.75rem;
+    font-family: bottegaveneta-regular-webfont, Arial, sans-serif;
+    font-size: 0.85rem;
 }
+
+.desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop {
+        display: initial;
+    }
+
+    .center {
+        text-align: center;
+        display: non;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+    }
+}
+
 header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     max-width: 100%;
-    height: 3.75rem;
+    height: 1.5rem;
     background: #fff;
-    display: flex;
     justify-content: space-between;
     z-index: 3;
-    padding: 1.25rem 1rem 1.1875rem;
-    gap: 1.5625rem;
+    font-family: bottegaveneta-regular-webfont, Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #000;
+    overflow-x: hidden;
+    align-items: center;
+    padding: 1.125rem 1.0625rem 1.125rem 1.125rem;
+    gap: 1.875rem;
+    border-bottom: 1px solid #fff;
 }
+
 a.logo img {
-    height: auto;
-    max-height: 100%; 
-    max-width: 100%; 
-    color:inherit;
-}
-header a{
+    max-width: 225px;
     color: inherit;
 }
-header nav a{
+
+header a {
+    color: inherit;
+}
+
+header nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav.center {
+    text-align: center;
+}
+
+section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 0.625rem solid #fff;
+    position: relative;
+}
+
+section:first-child {
+    border-top: none;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.buttons a {
+    display: inline-block;
+    color: inherit;
+    pointer-events: all;
+    padding: 0.5rem 2rem 0.5rem;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 1rem;
     text-decoration: none;
 }
-header nav.center{
-    text-align: center;
+
+.buttons a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+nav.right {
+    padding-right: 1.5rem;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6rem auto 0;
+    line-height: 1.875rem;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-family: bottegaveneta-regular-webfont, Arial, sans-serif;
+    font-size: 1rem;
+    transition: text-decoration 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .footer-column {
+        flex: 1;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+}
+.c-footercopyright {
+    padding: 0 0.875rem 1.125rem;
+    font-size: .8125rem;
+    line-height: 1.875rem;
+    color: #bfbfbf;
+    margin-top: -0.3125rem;
 }
